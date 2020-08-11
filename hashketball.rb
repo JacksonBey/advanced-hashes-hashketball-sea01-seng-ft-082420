@@ -1,4 +1,5 @@
 # Write your code below game_hash
+require "pry"
 def game_hash
   {
     home: {
@@ -127,3 +128,146 @@ def game_hash
 end
 
 # Write code here
+def num_points_scored(name)
+  hash=game_hash
+  hash.each do |key, value|
+    value.each do |pname, pstat|
+      if !pstat[0].is_a? String
+        pstat.each do |catstat|
+          catstat.each do |bub|
+            if bub[1] ===name
+              return catstat[:points]
+
+end
+end
+end
+end
+end
+end
+end
+
+def shoe_size(name)
+  hash=game_hash
+  hash.each do |key, value|
+    value.each do |pname, pstat|
+      if !pstat[0].is_a? String
+        pstat.each do |catstat|
+          catstat.each do |bub|
+            if bub[1] ===name
+              return catstat[:shoe]
+
+end
+end
+end
+end
+end
+end
+end
+  
+def team_colors(team)
+  hash=game_hash
+  hash.each do |key, value|
+    value.each do |pname, pstat|
+      if pstat === team
+        return value[:colors]
+end
+end
+end
+end 
+
+def team_names
+  hash=game_hash
+team_array=[hash[:away][:team_name],hash[:home][:team_name]]
+return team_array
+end
+
+def player_numbers(teamname)
+  hash=game_hash
+  nums_array=[]
+  hash.each do |key, value|
+    if value[:team_name]===teamname
+      value.each do |pname, pstat|
+        if !pstat[0].is_a? String
+         pstat.each do |catstat|
+           nums_array.push(catstat[:number])
+          
+end
+end
+end
+end
+end
+return nums_array
+end
+
+def player_stats(name)
+  hash=game_hash
+  hash.each do |key, value|
+    value.each do |pname, pstat|
+      if !pstat[0].is_a? String
+        pstat.each do |catstat|
+          catstat.each do |bub|
+            if bub[1] ===name
+              return catstat
+
+end
+end
+end
+end
+end
+end
+end
+
+def big_shoe_rebounds
+  hash=game_hash
+  shoesize = 0
+  hash.each do |key, value|
+    value.each do |pname, pstat|
+      if !pstat[0].is_a? String
+        pstat.each do |catstat|
+            if shoesize < catstat[:shoe]
+              shoesize = catstat[:shoe]
+
+end
+end
+end
+end
+end
+  hash.each do |key, value|
+    value.each do |pname, pstat|
+      if !pstat[0].is_a? String
+        pstat.each do |catstat|
+            if shoesize === catstat[:shoe]
+              return catstat[:rebounds]
+
+end
+end
+end
+end
+end
+end
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
