@@ -131,6 +131,7 @@ end
 def num_points_scored(name)
   hash=game_hash
   hash.each do |key, value|
+<<<<<<< HEAD
     value.each do |pname, pstat|
       if !pstat[0].is_a? String
         pstat.each do |catstat|
@@ -160,10 +161,15 @@ end
 end
 end
 end
+=======
+    value.each do |name|
+      binding.pry
+>>>>>>> c090ae257059aa669f112f8b2cf717e563367062
 end
 end
 end
   
+<<<<<<< HEAD
 def team_colors(team)
   hash=game_hash
   hash.each do |key, value|
@@ -256,6 +262,18 @@ end
 
 
 
+=======
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+>>>>>>> c090ae257059aa669f112f8b2cf717e563367062
   
   
   
